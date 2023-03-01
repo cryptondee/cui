@@ -1,8 +1,9 @@
+import Image from "next/image";
 const people = [
   {
     name: "0xAtomist",
     role: "Founder - King",
-    imageUrl: "./assets/Team/Atomist.jpg",
+    imageUrl: "/assets/Team/Atomist.jpg",
     twitterUrl: "https://twitter.com/0xAtomist",
     description:
       "Content creator for all things Defi, with a specialization in Marketing, Networking, and Community Building across the Crypto Industry",
@@ -10,7 +11,7 @@ const people = [
   {
     name: "SniperMonke.soul 🛸(💙,🧡)",
     role: "Duke",
-    imageUrl: "./assets/Team/Snipe.jpg",
+    imageUrl: "/assets/Team/Snipe.jpg",
     twitterUrl: "https://twitter.com/SniperMonke01",
     description:
       "Resident bot builder and GMX communications dev, Shitposter and Always Online Janitor",
@@ -18,7 +19,7 @@ const people = [
   {
     name: "defipleb",
     role: "Duke",
-    imageUrl: "./assets/Team/Defipleb.jpg",
+    imageUrl: "/assets/Team/Defipleb.jpg",
     twitterUrl: "https://twitter.com/defipleb",
     description:
       "Gigachad Low-cap caller with conviction, best networker in town",
@@ -26,14 +27,14 @@ const people = [
   {
     name: "HanSolar.eth",
     role: "Duke",
-    imageUrl: "./assets/Team/Hansolar.jpg",
+    imageUrl: "/assets/Team/Hansolar.jpg",
     twitterUrl: "https://twitter.com/hansolar21",
     description: "Crypto Options and Macro Expert, sound fundamental basis",
   },
   {
     name: "0x_Vlad",
     role: "Lords",
-    imageUrl: "./assets/Team/0x_Vlad.jpg",
+    imageUrl: "/assets/Team/0x_Vlad.jpg",
     twitterUrl: "https://twitter.com/0x_Vlad/",
     description:
       "Resident Technical Analist with a focus on trends and a MentFX student (FX). TP POLICE",
@@ -41,7 +42,7 @@ const people = [
   {
     name: "CJ",
     role: "Lords",
-    imageUrl: "./assets/Team/CJ3.jpg",
+    imageUrl: "/assets/Team/CJ3.jpg",
     twitterUrl: "https://twitter.com/CJCJCJCJ_/",
     description:
       "Our own Crypto Scrapper and filter. Follow for quite litterly everything",
@@ -52,7 +53,7 @@ const people = [
 
 export default function Team() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div id="team" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -72,10 +73,12 @@ export default function Team() {
         >
           {people.map((person) => (
             <li key={person.name}>
-              <img
+              <Image
                 className="aspect-[3/2] w-full rounded-2xl object-cover"
                 src={person.imageUrl}
                 alt=""
+                height={100}
+                width={100}
               />
               <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
                 {person.name}

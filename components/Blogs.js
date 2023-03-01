@@ -12,6 +12,9 @@
   }
   ```
 */
+import { useRef } from "react";
+import Image from "next/image";
+
 const posts = [
   {
     id: 1,
@@ -26,7 +29,7 @@ const posts = [
       name: "Atomist",
       role: "King",
       href: "#",
-      imageUrl: "./assets/Atomist.jpg",
+      imageUrl: "/assets/Team/Atomist.jpg",
     },
   },
   {
@@ -42,7 +45,7 @@ const posts = [
       name: "Atomist",
       role: "King",
       href: "#",
-      imageUrl: "./assets/Atomist.jpg",
+      imageUrl: "/assets/Team/Atomist.jpg",
     },
   },
   {
@@ -58,7 +61,7 @@ const posts = [
       name: "Atomist",
       role: "King",
       href: "#",
-      imageUrl: "./assets/Atomist.jpg",
+      imageUrl: "/assets/Team/Atomist.jpg",
     },
   },
   {
@@ -74,15 +77,16 @@ const posts = [
       name: "Atomist",
       role: "King",
       href: "#",
-      imageUrl: "./assets/Team/Atomist.jpg",
+      imageUrl: "/assets/Team/Atomist.jpg",
     },
   },
   // More posts...
 ];
 
 export default function Blogs() {
+  const myRef = useRef(null);
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div id="blog" ref={myRef} className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -121,10 +125,12 @@ export default function Blogs() {
                 </p>
               </div>
               <div className="relative mt-8 flex items-center gap-x-4">
-                <img
+                <Image
                   src={post.author.imageUrl}
                   alt=""
                   className="h-10 w-10 rounded-full bg-gray-50"
+                  width={100}
+                  height={100}
                 />
                 <div className="text-sm leading-6">
                   <p className="font-semibold text-gray-900">

@@ -1,4 +1,5 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useRef } from "react";
+import Link from "next/link";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -58,6 +59,10 @@ function classNames(...classes) {
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const handleClick = (e) => {
+    e.preventDefault();
+    scrollIntoView({ behavoir: "smooth" });
+  };
 
   return (
     <header className="relative isolate z-10 bg-gray-900">
@@ -67,7 +72,7 @@ export default function Example() {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">Castle Capital</span>
             <LogoW />
           </a>
         </div>
@@ -113,13 +118,13 @@ export default function Example() {
                           aria-hidden="true"
                         />
                       </div>
-                      <a
+                      <Link
                         href={item.href}
                         className="mt-6 block font-semibold text-white"
                       >
                         {item.name}
                         <span className="absolute inset-0" />
-                      </a>
+                      </Link>
                       <p className="mt-1 text-gray-400">{item.description}</p>
                     </div>
                   ))}
@@ -147,15 +152,25 @@ export default function Example() {
             </Transition>
           </Popover>
 
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          <Link
+            onClick={handleClick}
+            href="#blog"
+            className="text-sm font-semibold leading-6 text-white"
+          >
             Newsletter/Blog
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          </Link>
+          <Link
+            href="#team"
+            className="text-sm font-semibold leading-6 text-white"
+          >
             Our Team
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          </Link>
+          <Link
+            href="#portco"
+            className="text-sm font-semibold leading-6 text-white"
+          >
             Portco/investments
-          </a>
+          </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
       </nav>
@@ -168,14 +183,6 @@ export default function Example() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
-            </a>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-white"
