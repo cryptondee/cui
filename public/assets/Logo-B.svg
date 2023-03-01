@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+	<title>DALL·E 2023-03-01 13</title>
+	<defs>
+		<image  width="256" height="349" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAFdAQMAAADWrCEMAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAAAAAApWe5zwAAAAJ0Uk5T/wDltzBKAAAAU0lEQVR4nO3KsQ2AMAwAQUsp2H/TTIBxmjQoJUKQ++qLi6hydNa0vBUAAGwNZgAAAAAAAADwW3BkBwAAAAAAAAAAAAAAAAAAeAYsA4CPAkmSXu8C1q2Kdnv3qh8AAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		.s0 { fill: #000000 } 
+	</style>
+	<use id="Shape 4" href="#img1" x="324" y="319"/>
+	<path id="Shape 5" class="s0" d="m458 380h18v22h26v-22h29v22h32v-22h16v91h-121z"/>
+	<path id="Shape 6" class="s0" d="m456 496h123v77h-123z"/>
+	<path id="Shape 7" class="s0" d="m603 349h23v35h50v-35h24v319h-97z"/>
+</svg>
