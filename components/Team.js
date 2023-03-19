@@ -1,12 +1,12 @@
 import Image from "next/image";
 const people = [
   {
-    name: "0xAtomist",
+    name: "0xAtomist - (Marketing & Tokenomics Lead)",
     role: "Founder - King",
     imageUrl: "/assets/Team/Atomist.jpg",
     twitterUrl: "https://twitter.com/0xAtomist",
     description:
-      "Content creator for all things Defi, with a specialization in Marketing, Networking, and Community Building across the Crypto Industry",
+      "Our content creator for all things DeFi, with a specialisation in marketing, protocol design and networking. As a Chemical Engineer by trade, he has a wealth of experience in understanding complex systems, problem solving and leading multi-disciplinary teams, all of which led him to create the Castle we know today",
   },
   {
     name: "SniperMonke.soul 🛸(💙,🧡)",
@@ -53,18 +53,17 @@ const people = [
 
 export default function Team() {
   return (
-    <div id="team" className="bg-white py-24 sm:py-32">
+    <div id="team" className="bg-white pt-0 py-24 sm:py-32 sm:pt-0">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Our team
+            About Us
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Castle Capital is a private community of budding researchers,
-            analysts, builders, investors and traders from across crypto and
-            DeFi Initially spawned in late 2021, The Castle has grown slowly and
-            organically, handpicking members for their knowledge, edge and reach
-            in the space
+            Castle Capital was founded to be an open and welcoming place to
+            share plays/ideas and help others develop. The community has been
+            grown organically, bringing in high-value individuals with deep
+            knowledge and reach in the space.
           </p>
         </div>
         <ul

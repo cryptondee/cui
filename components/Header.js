@@ -1,4 +1,4 @@
-import { Fragment, useState, useRef } from "react";
+import React, { Fragment, useState, useRef } from "react";
 import Link from "next/link";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import {
@@ -21,29 +21,41 @@ import {
   RectangleGroupIcon,
 } from "@heroicons/react/20/solid";
 import LogoW from "./LogoW";
+import LogoB from "./LogoB";
 
 const products = [
   {
-    name: "Analysis",
-    description: "Deep review of your project and industry verticles ",
+    name: "Fundraising",
+    description:
+      "Castle Capital connects you with angel investors and provides support beyond funding for your project.",
     href: "#",
     icon: ChartPieIcon,
   },
   {
-    name: "Engagement",
-    description: "Grow your following with our audience",
+    name: "Marketing Strategy",
+    description:
+      "We have DeFi expertise, a partner network, and experience to help you achieve your goals.",
     href: "#",
     icon: CursorArrowRaysIcon,
   },
   {
-    name: "Feedback",
-    description: "Valuable and actionable feedback on your product",
+    name: "Business Development",
+    description:
+      "Castle Capital quickly identifies industry trends and connects you with potential partners to grow your business.",
     href: "#",
     icon: ChatBubbleBottomCenterIcon,
   },
   {
-    name: "Funding",
-    description: "Make your dream a reality",
+    name: "Tokenomic Design",
+    description:
+      "As DeFi enthusiasts, we understand the importance of tokenomics and believe in incentivizing user actions for sustainable growth.",
+    href: "#",
+    icon: CurrencyDollarIcon,
+  },
+  {
+    name: "Product Strategy",
+    description:
+      "We guide product and go-to-market strategies, identifying gaps in the market to solidify user base.",
     href: "#",
     icon: CurrencyDollarIcon,
   },
@@ -59,9 +71,12 @@ function classNames(...classes) {
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const handleClick = (e) => {
+  const newsletterRef = useRef();
+  const teamRef = useRef();
+  const handleScroll = (e) => {
     e.preventDefault();
-    scrollIntoView({ behavoir: "smooth" });
+    console.log(e);
+    e.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -89,7 +104,7 @@ export default function Example() {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover>
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
-              Our Approach
+              Services
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-gray-400"
                 aria-hidden="true"
@@ -153,23 +168,24 @@ export default function Example() {
           </Popover>
 
           <Link
-            onClick={handleClick}
-            href="#blog"
+            ref={newsletterRef}
+            href="#newsletter"
             className="text-sm font-semibold leading-6 text-white"
           >
-            Newsletter/Blog
+            Newsletter
+          </Link>
+          <Link
+            ref={teamRef}
+            href="#value"
+            className="text-sm font-semibold leading-6 text-white"
+          >
+            Value-add & Expertise
           </Link>
           <Link
             href="#team"
             className="text-sm font-semibold leading-6 text-white"
           >
-            Our Team
-          </Link>
-          <Link
-            href="#portco"
-            className="text-sm font-semibold leading-6 text-white"
-          >
-            Portco/investments
+            About us
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
@@ -183,9 +199,13 @@ export default function Example() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
+              <LogoB />
+            </a>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-white"
+              className="-m-2.5 rounded-md p-2.5 text-gray-700"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -199,7 +219,7 @@ export default function Example() {
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50">
-                        Product
+                        Services
                         <ChevronDownIcon
                           className={classNames(
                             open ? "rotate-180" : "",
@@ -214,7 +234,7 @@ export default function Example() {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-gray-50"
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             {item.name}
                           </Disclosure.Button>
@@ -224,30 +244,25 @@ export default function Example() {
                   )}
                 </Disclosure>
                 <a
-                  href="#"
-                  className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-black hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
+                  href="#blog"
+                  className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Features
+                  Newsletter
                 </a>
                 <a
-                  href="#"
-                  className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-black hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
+                  href="#value"
+                  className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Marketplace
+                  Value-add & Expertise
                 </a>
                 <a
-                  href="#"
-                  className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-black hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
+                  href="#team"
+                  className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Company
-                </a>
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-black hover:bg-gray-50"
-                >
-                  Log in
+                  About us
                 </a>
               </div>
             </div>

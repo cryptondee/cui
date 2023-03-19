@@ -63,9 +63,10 @@ export default function Hero() {
             Peeking through the Castle's Keyhole
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Private group of DeFi-native investors. Actively participating in
-            raises and available in support/advisor capacities for new teams and
-            projects.
+            Castle Capital is an invite-only group of DeFi investors, actively
+            participating in raises and providing support to projects. We
+            believe in blockchain's potential for innovative financial
+            applications in DeFi.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <a

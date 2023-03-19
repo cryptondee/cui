@@ -6,6 +6,7 @@ import Team from "/components/Team";
 import Blogs from "@/components/Blogs";
 import LogoW from "@/components/LogoW";
 import Footer from "@/components/Footer";
+import ValueAdd from "@/components/ValueAdd";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Hero />
       <Blogs />
       <NewsLetter />
+      <ValueAdd />
       <Team />
       <Footer />
     </>

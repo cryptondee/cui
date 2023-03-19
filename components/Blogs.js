@@ -86,14 +86,17 @@ const posts = [
 export default function Blogs() {
   const myRef = useRef(null);
   return (
-    <div id="blog" ref={myRef} className="bg-white py-24 sm:py-32">
+    <div id="newsletter" ref={myRef} className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             The Castle Chronicle
           </h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">
-            Stay 2 steps ahead of the curve, peek through the keyhole.
+            As part of our contribution back to the space, we produce a{" "}
+            <strong>free</strong> weekly newsletter, The Castle Chronicle,
+            documenting our commentary of news, narratives, events and fresh
+            technologies in the space.
           </p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
