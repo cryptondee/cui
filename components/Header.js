@@ -5,11 +5,13 @@ import {
   Bars3Icon,
   ChartPieIcon,
   ChatBubbleBottomCenterIcon,
+  Cog8ToothIcon,
   CurrencyDollarIcon,
   CursorArrowRaysIcon,
   DocumentIcon,
   EnvelopeIcon,
   FingerPrintIcon,
+  FunnelIcon,
   SquaresPlusIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
@@ -28,36 +30,36 @@ const products = [
     name: "Fundraising",
     description:
       "Castle Capital connects you with angel investors and provides support beyond funding for your project.",
-    href: "#",
+    href: "#services",
     icon: ChartPieIcon,
   },
   {
     name: "Marketing Strategy",
     description:
       "We have DeFi expertise, a partner network, and experience to help you achieve your goals.",
-    href: "#",
+    href: "#services",
     icon: CursorArrowRaysIcon,
   },
   {
     name: "Business Development",
     description:
       "Castle Capital quickly identifies industry trends and connects you with potential partners to grow your business.",
-    href: "#",
+    href: "#services",
     icon: ChatBubbleBottomCenterIcon,
   },
   {
     name: "Tokenomic Design",
     description:
       "As DeFi enthusiasts, we understand the importance of tokenomics and believe in incentivizing user actions for sustainable growth.",
-    href: "#",
-    icon: CurrencyDollarIcon,
+    href: "#services",
+    icon: Cog8ToothIcon,
   },
   {
     name: "Product Strategy",
     description:
       "We guide product and go-to-market strategies, identifying gaps in the market to solidify user base.",
-    href: "#",
-    icon: CurrencyDollarIcon,
+    href: "#services",
+    icon: FunnelIcon,
   },
 ];
 const callsToAction = [
@@ -80,9 +82,9 @@ export default function Example() {
   };
 
   return (
-    <header className="relative isolate z-10 bg-gray-900">
+    <header className="isolate bg-gray-900 fixed z-50 w-screen">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -135,6 +137,10 @@ export default function Example() {
                       </div>
                       <Link
                         href={item.href}
+                        onClick={() => {
+                          close();
+                          console.log("close");
+                        }}
                         className="mt-6 block font-semibold text-white"
                       >
                         {item.name}
@@ -200,7 +206,7 @@ export default function Example() {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">Castle Capital</span>
               <LogoB />
             </a>
             <button
