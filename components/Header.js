@@ -96,7 +96,7 @@ export default function Example() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+            className=" inline-flex items-center justify-center rounded-md p-2.5 text-white"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -135,7 +135,7 @@ export default function Example() {
                           aria-hidden="true"
                         />
                       </div>
-                      <Link
+                      <Popover.Button as={Link}
                         href={item.href}
                         onClick={() => {
                           close();
@@ -145,7 +145,7 @@ export default function Example() {
                       >
                         {item.name}
                         <span className="absolute inset-0" />
-                      </Link>
+                      </Popover.Button>
                       <p className="mt-1 text-gray-400">{item.description}</p>
                     </div>
                   ))}
@@ -189,6 +189,7 @@ export default function Example() {
           </Link>
           <Link
             href="#team"
+            scroll={false}
             className="text-sm font-semibold leading-6 text-white"
           >
             About us
