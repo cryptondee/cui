@@ -137,10 +137,6 @@ export default function Example() {
                       </div>
                       <Popover.Button as={Link}
                         href={item.href}
-                        onClick={() => {
-                          close();
-                          console.log("close");
-                        }}
                         className="mt-6 block font-semibold text-white"
                       >
                         {item.name}
