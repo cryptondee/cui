@@ -8,8 +8,22 @@ import LogoW from "@/components/LogoW";
 import Footer from "@/components/Footer";
 import ValueAdd from "@/components/ValueAdd";
 import Services from "@/components/services";
+import axios from "axios";
 
-export default function Home() {
+export async function getServerSideProps() {
+  const res = await axios.get(
+    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/getPosts`
+  );
+  const data = await res.data.data.data;
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+export default function Home({ data }) {
   return (
     <>
       <Head>
@@ -21,7 +35,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Services />
-      <Blogs />
+      <Blogs posts={data} />
       <NewsLetter />
       <ValueAdd />
       <Team />
