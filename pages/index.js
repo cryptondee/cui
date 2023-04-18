@@ -10,18 +10,18 @@ import ValueAdd from "@/components/ValueAdd";
 import Services from "@/components/services";
 import axios from "axios";
 
-export async function getServerSideProps() {
-  const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/getPosts`
-  );
-  const data = await res.data.data.data;
+// export async function getServerSideProps() {
+//   const res = await axios.get(
+//     `${process.env.NEXT_PUBLIC_API_ENDPOINT}/getPosts`
+//   );
+//   const data = await res.data.data.data;
 
-  return {
-    props: {
-      data,
-    },
-  };
-}
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// }
 
 export default function Home({ data }) {
   return (
