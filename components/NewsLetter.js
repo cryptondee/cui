@@ -64,10 +64,12 @@ export default function NewsLetter() {
                   aria-hidden="true"
                 />
               </div>
-              <dt className="mt-4 font-semibold text-white">Weekly Articles</dt>
+              <dt className="mt-4 font-semibold text-white">
+                Your Weekly Crypto Dose
+              </dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                Every monday a new volume recaping the week with a forward
-                looking statement
+                Every Wednesday a new volume looking at the past week and a view
+                of the future through the lens of The Castle
               </dd>
             </div>
             <div className="flex flex-col items-start">
@@ -78,11 +80,12 @@ export default function NewsLetter() {
                 />
               </div>
               <dt className="mt-4 font-semibold text-white">
-                No Spam, Actionable Content
+                Actionable Research
               </dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                Key News, Hot Narratives, Macro Outlooks, Charts, On-Chain
-                Reports, Research Compilation
+                Our analysts create insightful reports, dissecting on-chain
+                events and protocol innovations, enabling confident navigation
+                of the DeFi terrain.
               </dd>
             </div>
           </dl>

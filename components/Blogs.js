@@ -35,6 +35,13 @@ export default function Blogs({ posts }) {
                       </time>
                     </div>
                     <div className="group relative">
+                      <Image
+                        src={post.thumbnail_url}
+                        alt=""
+                        className="h-100 w-100 bg-gray-50"
+                        width={500}
+                        height={500}
+                      />
                       <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                         <span className="absolute" />
                         {post.title}
@@ -44,13 +51,7 @@ export default function Blogs({ posts }) {
                       </p>
                     </div>
                     <div className="sticky mt-8 flex items-center gap-x-4">
-                      <Image
-                        src={post.thumbnail_url}
-                        alt=""
-                        className="h-10 w-10 rounded-full bg-gray-50"
-                        width={100}
-                        height={100}
-                      />
+                      <span> By</span>
                       <div className="text-sm leading-6">
                         {post.authors.map((author, index) => (
                           <span key={index} className="">
