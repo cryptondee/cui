@@ -51,20 +51,20 @@ const people = [
   // More people...
 ];
 
-export default function Team() {
+export default function Vision() {
   return (
-    <div id="team" className="bg-white pt-6 py-24 sm:py-32 sm:pt-32">
+    <div id="vision" className="bg-white pt-6 py-24 sm:py-32 sm:pt-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            About Us
+            Vision
           </h2>
           <p className="mt-6 text-base leading-8 text-gray-600">
-            Our team also consists of other brilliant minds who contribute in
-            various capacities, from research and analysis to community
-            management and marketing. We believe that our team members'
-            collective wisdom and experience are key factors in Castle Capital's
-            effectiveness and impact in the DeFi space.
+            With a vision to redefine traditional investment groups, Castle
+            Capital aims to become an influential force in the DeFi world,
+            delivering high-value services with openness and transparency. Our
+            growth strategy involves attracting deep expertise, amplifying our
+            influence, and investing in our community.
           </p>
         </div>
       </div>

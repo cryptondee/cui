@@ -60,7 +60,7 @@ export default function Hero() {
       <div className="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:py-40 lg:px-8">
         <div className="mt-20 mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
           <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Peeking through the Castle's Keyhole
+            Castle Capital
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Castle Capital is a research driven advisory venture firm, actively
@@ -70,7 +70,7 @@ export default function Hero() {
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <a
-              href="#"
+              href="#vision"
               className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
             >
               Learn more
@@ -78,8 +78,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32">
-          <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-          </div>
+          <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none"></div>
         </div>
       </div>
     </div>

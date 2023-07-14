@@ -10,37 +10,37 @@ const features = [
   {
     name: "Fundraising Support",
     description:
-      "We offer comprehensive support to projects seeking funding. Through our community of angel investors, we assist in raising capital and work closely with projects providing insights from our collective experience. We are committed to fostering a mutually beneficial relationship, allowing you to benefit from the breadth and depth of our knowledge within the DeFi space.",
+      "Need funding support? We offer an assistive hand, connecting you with our angel investor community. Our collective DeFi experience is a resource you can bank on for growth.",
     icon: ChartPieIcon,
   },
   {
     name: "Marketing Strategy",
     description:
-      "Navigating the DeFi landscape requires a deep understanding of market dynamics and user behavior. Our team excels at designing innovative marketing strategies that resonate with your target audience. We closely follow market trends and user feedback, enabling us to develop and implement marketing strategies that will help you stand out and achieve your goals.",
+      "Our team crafts dynamic marketing strategies, shaped by keen market insights and user trends. We build unique narratives that help you stand out in the DeFi landscape.",
     icon: CursorArrowRaysIcon,
   },
   {
     name: "Business Development",
     description:
-      "Our widely established networks and deep industry knowledge enable us to quickly identify opportunities and potential synergies. We offer strategic guidance and connections to grow your business. With Castle Capital, you gain access to a team that is always on the lookout for collaboration opportunities, capable of facilitating introductions and partnerships that can help you scale your operations.",
+      "With our industry knowledge and established networks, we identify growth opportunities and potential collaborations. We’re your key to strategic partnerships that can scale your operations.",
     icon: ChatBubbleBottomCenterIcon,
   },
   {
     name: "On-Chain Analysis",
     description:
-      "We provide comprehensive on-chain data analysis to uncover insights and identify strategic opportunities. This includes understanding user behavior, identifying key trends, assessing the competitive landscape, and providing actionable intelligence to inform decision-making. Our team deeply understands blockchain data structures and analytics, enabling us to provide detailed and valuable insights.",
+      "Leverage our on-chain data analysis for strategic advantage. We decode user behavior, trend movements, and competitive dynamics, delivering actionable insights for decisive action",
     icon: Cog8ToothIcon,
   },
   {
     name: "Documentation",
     description:
-      "We deliver meticulously crafted documentation services to capture the essence of your project. Our goal is to simplify complex DeFi concepts, foster community engagement, and drive your project's growth by providing clear, concise, and accessible information. Whether it's about demystifying your project's intricate technology or producing engaging educational content, we’ve got you covered.",
+      "We distill complexity into comprehension with our documentation services. By simplifying complex DeFi concepts, we foster community engagement and drive your project’s growth.",
     icon: FunnelIcon,
   },
   {
     name: "Content Creation",
     description:
-      "We offer a comprehensive content creation service, focusing on ghostwriting for all your content needs. We are also able to leverage out extensive Key Opinion Leader (KOL) network for external-based content, should it be desired. Our professional writers are adept at creating high-quality content tailored to your brand’s voice and values. We make your message accessible to a wide range of audiences, helping you connect with potential users, partners, and investors.",
+      "For all your content needs, our ghostwriting service is your solution. If needed, we tap into our extensive Key Opinion Leader network for external-based content. We shape your brand’s voice into high-quality content, making it accessible to diverse audiences. ",
     icon: FunnelIcon,
   },
 ];
@@ -51,7 +51,7 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <h2 className="self-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Our services
+            Our Services
           </h2>
           <dl className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
             {features.map((feature) => (

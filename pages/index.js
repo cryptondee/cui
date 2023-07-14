@@ -2,11 +2,11 @@ import Head from "next/head";
 import Header from "/components/Header";
 import Hero from "/components/Hero";
 import NewsLetter from "/components/NewsLetter";
-import Team from "/components/Team";
+import Vision from "/components/Vision";
 import Blogs from "@/components/Blogs";
 import LogoW from "@/components/LogoW";
 import Footer from "@/components/Footer";
-import ValueAdd from "@/components/ValueAdd";
+import Bio from "@/components/Bio";
 import Services from "@/components/services";
 import axios from "axios";
 
@@ -40,8 +40,8 @@ export default function Home({ data }) {
       <Services />
       <Blogs posts={data} />
       <NewsLetter />
-      <ValueAdd />
-      <Team />
+      <Bio />
+      <Vision />
       <Footer />
     </>
   );
