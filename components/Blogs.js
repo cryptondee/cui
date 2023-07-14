@@ -23,11 +23,8 @@ export default function Blogs({ posts }) {
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {showPost && showPost.length > 0
             ? showPost.map((post) => (
-                <a href={post.web_url} key={post.id}>
-                  <article
-                    key={post.id}
-                    className="flex max-w-xl flex-col items-start justify-between"
-                  >
+                <a key={post.id} href={post.web_url}>
+                  <article className="flex max-w-xl flex-col items-start justify-between">
                     <div className="flex items-center gap-x-4 text-xs">
                       <time
                         dateTime={new Date(post.publish_date * 1000)}
