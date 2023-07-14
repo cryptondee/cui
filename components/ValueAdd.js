@@ -7,12 +7,11 @@ export default function ValueAdd() {
             Value-Add & Expertise
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            As long-term natives within the space, our community consists of
-            researchers, analysts, builders, investors and traders from across
-            crypto and DeFi — the majority of which have helped successful
-            projects grow from ideas to blue-chips, whether as team members or
-            community contributors (developers, content creators, marketeers,
-            protocol advisors).
+          At Castle Capital, we strive to transcend the traditional boundaries of investment groups.
+
+Our vision rests on becoming an influential partner within the DeFi ecosystem, committed to delivering high value-add services while promoting openness and transparency.
+
+Our goal is to grow organically, attract deep expertise, and leverage our influence to give back to the community.
           </p>
         </div>
       </div>

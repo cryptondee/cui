@@ -63,7 +63,7 @@ export default function Hero() {
             Peeking through the Castle's Keyhole
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Castle Capital is an invite-only group of DeFi investors, actively
+            Castle Capital is a research driven advisory venture firm, actively
             participating in raises and providing support to projects. We
             believe in blockchain's potential for innovative financial
             applications in DeFi.
@@ -79,13 +79,6 @@ export default function Hero() {
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mt-0 lg:mr-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-            <Image
-              src="/assets/Castle1.jpeg"
-              alt="App screenshot"
-              width={500}
-              height={200}
-              className="w-[60rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
-            />
           </div>
         </div>
       </div>
