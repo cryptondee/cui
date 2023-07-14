@@ -64,7 +64,7 @@ const products = [
 ];
 const callsToAction = [
   { name: "Subscribe now", href: "#subscribe", icon: DocumentIcon },
-  { name: "Contact Us", href: "#", icon: EnvelopeIcon },
+  { name: "Contact Us", href: "#contact", icon: EnvelopeIcon },
 ];
 
 function classNames(...classes) {

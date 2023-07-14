@@ -12,6 +12,7 @@ import axios from "axios";
 
 import { Bitter as Serif } from "@next/font/google";
 import AboutUs from "@/components/AboutUs";
+import Contact from "@/components/Contact";
 const serif = Serif({
   subsets: ["latin"],
   variable: "--font-serif",
@@ -44,11 +45,13 @@ export default function Home({ data }) {
       </Head>
       <Header />
       <Hero />
+      <Vision />
       <Services />
       <Blogs posts={data} />
       <NewsLetter />
       <AboutUs />
-      <Vision />
+
+      <Contact />
       <Footer />
     </>
   );
