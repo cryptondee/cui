@@ -1,9 +1,11 @@
 import {
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  ChatBubbleBottomCenterIcon,
+  BanknotesIcon,
+  FireIcon,
+  ChatBubbleLeftRightIcon,
   Cog8ToothIcon,
-  FunnelIcon,
+  ClipboardIcon,
+  ArchiveBoxIcon,
+  LinkIcon,
 } from "@heroicons/react/24/outline";
 
 const features = [
@@ -11,37 +13,37 @@ const features = [
     name: "Fundraising Support",
     description:
       "Need funding support? We offer an assistive hand, connecting you with our angel investor community. Our collective DeFi experience is a resource you can bank on for growth.",
-    icon: ChartPieIcon,
+    icon: BanknotesIcon,
   },
   {
     name: "Marketing Strategy",
     description:
       "Our team crafts dynamic marketing strategies, shaped by keen market insights and user trends. We build unique narratives that help you stand out in the DeFi landscape.",
-    icon: CursorArrowRaysIcon,
+    icon: FireIcon,
   },
   {
     name: "Business Development",
     description:
       "With our industry knowledge and established networks, we identify growth opportunities and potential collaborations. We’re your key to strategic partnerships that can scale your operations.",
-    icon: ChatBubbleBottomCenterIcon,
+    icon: ChatBubbleLeftRightIcon,
   },
   {
     name: "On-Chain Analysis",
     description:
       "Leverage our on-chain data analysis for strategic advantage. We decode user behavior, trend movements, and competitive dynamics, delivering actionable insights for decisive action",
-    icon: Cog8ToothIcon,
+    icon: LinkIcon,
   },
   {
     name: "Documentation",
     description:
       "We distill complexity into comprehension with our documentation services. By simplifying complex DeFi concepts, we foster community engagement and drive your project’s growth.",
-    icon: FunnelIcon,
+    icon: ClipboardIcon,
   },
   {
     name: "Content Creation",
     description:
       "For all your content needs, our ghostwriting service is your solution. If needed, we tap into our extensive Key Opinion Leader network for external-based content. We shape your brand’s voice into high-quality content, making it accessible to diverse audiences. ",
-    icon: FunnelIcon,
+    icon: ArchiveBoxIcon,
   },
 ];
 
