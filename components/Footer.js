@@ -31,7 +31,7 @@ export default function Example() {
             <div key={item.name} className="pb-6">
               <Link
                 href={item.href}
-                className="text-sm leading-6 text-white hover:text-indigo-500"
+                className="text-sm leading-6 text-white hover:text-[#6379E9]"
               >
                 {item.name}
               </Link>

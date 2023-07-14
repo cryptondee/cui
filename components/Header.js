@@ -105,7 +105,7 @@ export default function Example() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover>
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
+            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white hover:text-[#6379E9]">
               Services
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-gray-400"
@@ -171,25 +171,23 @@ export default function Example() {
           </Popover>
 
           <Link
-            ref={newsletterRef}
             href="#newsletter"
-            className="text-sm font-semibold leading-6 text-white"
+            className="text-sm font-semibold leading-6 text-white hover:text-[#6379E9]"
           >
             Newsletter
           </Link>
           <Link
-            ref={teamRef}
-            href="#value"
-            className="text-sm font-semibold leading-6 text-white"
+            href="#bio"
+            className="text-sm font-semibold leading-6 text-white hover:text-[#6379E9]"
           >
-            Value-add & Expertise
+            bio
           </Link>
           <Link
-            href="#team"
+            href="#vision"
             scroll={false}
-            className="text-sm font-semibold leading-6 text-white"
+            className="text-sm font-semibold leading-6 text-white hover:text-[#6379E9]"
           >
-            About us
+            vision
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>

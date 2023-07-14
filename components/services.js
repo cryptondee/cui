@@ -57,7 +57,7 @@ export default function Services() {
             {features.map((feature) => (
               <div key={feature.name}>
                 <div className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                  <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-[#6379E9]">
                     <feature.icon
                       className="h-6 w-6 text-white"
                       aria-hidden="true"
