@@ -8,35 +8,41 @@ import {
 
 const features = [
   {
-    name: "Fundraising",
+    name: "Fundraising Support",
     description:
-      "Castle Capital can aid your funding requirements via our community of angel investors. We believe in working closely with projects and supporting them in much more than just capital. When you raise with Castle, you get a whole army of natives behind you.",
+      "We offer comprehensive support to projects seeking funding. Through our community of angel investors, we assist in raising capital and work closely with projects providing insights from our collective experience. We are committed to fostering a mutually beneficial relationship, allowing you to benefit from the breadth and depth of our knowledge within the DeFi space.",
     icon: ChartPieIcon,
   },
   {
     name: "Marketing Strategy",
     description:
-      "We understand the wider market and what gets DeFi users out of bed. Along with a strong network of partners, our internal foundation has a wealth of experience designing and implementing strategies in order to help you achieve your goals, whatever they may be.",
+      "Navigating the DeFi landscape requires a deep understanding of market dynamics and user behavior. Our team excels at designing innovative marketing strategies that resonate with your target audience. We closely follow market trends and user feedback, enabling us to develop and implement marketing strategies that will help you stand out and achieve your goals.",
     icon: CursorArrowRaysIcon,
   },
   {
     name: "Business Development",
     description:
-      "Castle Capital prides itself on knowing what is happening and where, fast! We have wide networks within the space, which when tied to our deep knowledge base, enable us to spot synergies and connect you with potential partners in order to grow and scale your business.",
+      "Our widely established networks and deep industry knowledge enable us to quickly identify opportunities and potential synergies. We offer strategic guidance and connections to grow your business. With Castle Capital, you gain access to a team that is always on the lookout for collaboration opportunities, capable of facilitating introductions and partnerships that can help you scale your operations.",
     icon: ChatBubbleBottomCenterIcon,
   },
   {
-    name: "Tokenomic Design",
+    name: "On-Chain Analysis",
     description:
-      "As DeFi enthusiasts, we understand the importance of tokenomics and believe in incentivizing user actions for sustainable growth. Token models should benefit all parties in an ecosystem, resulting in an investable token tied to the product's success.",
+      "We provide comprehensive on-chain data analysis to uncover insights and identify strategic opportunities. This includes understanding user behavior, identifying key trends, assessing the competitive landscape, and providing actionable intelligence to inform decision-making. Our team deeply understands blockchain data structures and analytics, enabling us to provide detailed and valuable insights.",
     icon: Cog8ToothIcon,
   },
   {
-    name: "Product Strategy",
+    name: "Documentation",
     description:
-      "With our experience in product launches and knowledge of the market, we guide your product and go-to-market strategy for product market fit. We can identify gaps in the market to exploit and solidify your user base.",
+      "We deliver meticulously crafted documentation services to capture the essence of your project. Our goal is to simplify complex DeFi concepts, foster community engagement, and drive your project's growth by providing clear, concise, and accessible information. Whether it's about demystifying your project's intricate technology or producing engaging educational content, we’ve got you covered.",
     icon: FunnelIcon,
   },
+  {
+    name: "Content Creation",
+    description:
+    "We offer a comprehensive content creation service, focusing on ghostwriting for all your content needs. We are also able to leverage out extensive Key Opinion Leader (KOL) network for external-based content, should it be desired. Our professional writers are adept at creating high-quality content tailored to your brand’s voice and values. We make your message accessible to a wide range of audiences, helping you connect with potential users, partners, and investors.",
+    icon: FunnelIcon
+  }
 ];
 
 export default function Services() {

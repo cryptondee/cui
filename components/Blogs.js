@@ -10,10 +10,7 @@ export default function Blogs({ posts }) {
             The Castle Chronicle
           </h2>
           <p className="text-justify mt-2 text-lg leading-8 text-gray-600">
-            As part of our contribution back to the space, we produce a{" "}
-            <strong>free</strong> weekly newsletter, The Castle Chronicle,
-            documenting our commentary of news, narratives, events and fresh
-            technologies in the space.
+          As part of our commitment to enriching the DeFi community, we publish a free weekly newsletter - The Castle Chronicle. This newsletter covers a wide range of topics from in-depth commentary on the latest news, narratives, and technological innovations in DeFi, to explorations of emerging trends and perspectives.
           </p>
         </div>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
