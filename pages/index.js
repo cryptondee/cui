@@ -10,6 +10,12 @@ import Bio from "@/components/Bio";
 import Services from "@/components/services";
 import axios from "axios";
 
+import { Bitter as Serif } from "@next/font/google";
+const serif = Serif({
+  subsets: ["latin"],
+  variable: "--font-serif",
+});
+
 export async function getServerSideProps() {
   const res = await axios.get(
     `${process.env.NEXT_PUBLIC_API_ENDPOINT}/getPosts`

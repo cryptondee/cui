@@ -3,7 +3,22 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-      @apply !scroll-smooth; /* need important modifier to have it work everywhere */
-    }
+  html {
+    @apply !scroll-smooth; /* need important modifier to have it work everywhere */
   }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-bitter);
+    color: white !important;
+  }
+  p,
+  span,
+  time {
+    font-family: var(--font-mont);
+    color: white !important;
+  }
+  time {
+    margin-bottom: 1rem;
+  }
+}

@@ -7,7 +7,7 @@ export default function Blogs({ posts }) {
   const showPost = revPost.slice(0, 9);
 
   return (
-    <div id="newsletter" className="bg-white pt-24 pb-6 sm:py-32">
+    <div id="newsletter" className="bg-[#282C31] pt-24 pb-6 sm:py-32">
       <Cutoff />
       <div className="text-center cotnent-center mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
