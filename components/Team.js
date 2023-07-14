@@ -59,8 +59,12 @@ export default function Team() {
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             About Us
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-          Our team also consists of other brilliant minds who contribute in various capacities, from research and analysis to community management and marketing. We believe that our team members' collective wisdom and experience are key factors in Castle Capital's effectiveness and impact in the DeFi space.
+          <p className="mt-6 text-base leading-8 text-gray-600">
+            Our team also consists of other brilliant minds who contribute in
+            various capacities, from research and analysis to community
+            management and marketing. We believe that our team members'
+            collective wisdom and experience are key factors in Castle Capital's
+            effectiveness and impact in the DeFi space.
           </p>
         </div>
       </div>

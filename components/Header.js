@@ -87,7 +87,7 @@ export default function Example() {
         className="mx-auto flex max-w-7xl items-center justify-between lg:px-8"
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
+        <div className="flex lg:flex-1 py-3">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Castle Capital</span>
             <LogoW />
@@ -135,7 +135,8 @@ export default function Example() {
                           aria-hidden="true"
                         />
                       </div>
-                      <Popover.Button as={Link}
+                      <Popover.Button
+                        as={Link}
                         href={item.href}
                         className="mt-6 block font-semibold text-white"
                       >

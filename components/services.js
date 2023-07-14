@@ -40,14 +40,14 @@ const features = [
   {
     name: "Content Creation",
     description:
-    "We offer a comprehensive content creation service, focusing on ghostwriting for all your content needs. We are also able to leverage out extensive Key Opinion Leader (KOL) network for external-based content, should it be desired. Our professional writers are adept at creating high-quality content tailored to your brand’s voice and values. We make your message accessible to a wide range of audiences, helping you connect with potential users, partners, and investors.",
-    icon: FunnelIcon
-  }
+      "We offer a comprehensive content creation service, focusing on ghostwriting for all your content needs. We are also able to leverage out extensive Key Opinion Leader (KOL) network for external-based content, should it be desired. Our professional writers are adept at creating high-quality content tailored to your brand’s voice and values. We make your message accessible to a wide range of audiences, helping you connect with potential users, partners, and investors.",
+    icon: FunnelIcon,
+  },
 ];
 
 export default function Services() {
   return (
-    <div id="services" className="bg-white py-24 sm:py-32">
+    <div id="services" className="bg-white pt-24 pb-8 sm:pt-32 pb-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <h2 className="self-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

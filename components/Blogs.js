@@ -6,10 +6,10 @@ export default function Blogs({ posts }) {
   const showPost = revPost.slice(0, 9);
 
   return (
-    <div id="newsletter" className="bg-white py-24 sm:py-32">
+    <div id="newsletter" className="bg-white pt-24 pb-6 sm:py-32">
       <div className="text-center cotnent-center mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl pb-12 font-bold tracking-tight text-gray-900 sm:text-4xl">
             The Castle Chronicle
           </h2>
           <p className="text-justify mt-2 text-lg leading-8 text-gray-600">
