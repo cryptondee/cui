@@ -21,4 +21,7 @@
   time {
     margin-bottom: 1rem;
   }
+  img {
+    margin: auto;
+  }
 }

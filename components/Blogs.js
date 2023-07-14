@@ -8,10 +8,12 @@ export default function Blogs({ posts }) {
 
   return (
     <div id="newsletter" className="bg-[#282C31] pt-24 pb-6 sm:py-32">
-      <Cutoff />
-      <div className="text-center cotnent-center mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="img-center text-center content-center m-auto">
+        <Cutoff className="m-auto" />
+      </div>
+      <div className="text-center content-center mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl pb-12 font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl py-12 font-bold tracking-tight text-gray-900 sm:text-4xl">
             The Castle Chronicle
           </h2>
           <p className="text-justify mt-2 text-lg leading-8 text-gray-600">
