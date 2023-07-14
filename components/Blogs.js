@@ -52,7 +52,9 @@ export default function Blogs({ posts }) {
                       />
                       <div className="text-sm leading-6">
                         {post.authors.map((author, index) => (
-                          <span className="">{author} </span>
+                          <span key={index} className="">
+                            {author}{" "}
+                          </span>
                         ))}
                       </div>
                     </div>
