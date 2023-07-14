@@ -4,6 +4,7 @@ export default async function handler(req, res) {
     const options = {
       method: "GET",
       url: `https://api.beehiiv.com/v2/publications/${process.env.publication_id}/posts`,
+      params: { limit: "50" },
       headers: {
         "Content-Type": "application/json",
         Authorization: process.env.beehiivapi,
