@@ -1,10 +1,10 @@
-export default function Bio() {
+export default function AboutUs() {
   return (
-    <div id="bio" className="bg-[#282C31]  pt-24 sm:pt-32  ">
+    <div id="aboutus" className="bg-white  pt-24 sm:pt-32  ">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Bio
+            About Us
           </h2>
           <p className="mt-6 text-base leading-8 text-gray-600">
             Castle Capital unites a private, invite-only circle of DeFi

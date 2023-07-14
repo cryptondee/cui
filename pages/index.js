@@ -6,11 +6,12 @@ import Vision from "/components/Vision";
 import Blogs from "@/components/Blogs";
 import LogoW from "@/components/LogoW";
 import Footer from "@/components/Footer";
-import Bio from "@/components/Bio";
+
 import Services from "@/components/services";
 import axios from "axios";
 
 import { Bitter as Serif } from "@next/font/google";
+import AboutUs from "@/components/AboutUs";
 const serif = Serif({
   subsets: ["latin"],
   variable: "--font-serif",
@@ -46,7 +47,7 @@ export default function Home({ data }) {
       <Services />
       <Blogs posts={data} />
       <NewsLetter />
-      <Bio />
+      <AboutUs />
       <Vision />
       <Footer />
     </>

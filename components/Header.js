@@ -63,7 +63,7 @@ const products = [
   },
 ];
 const callsToAction = [
-  { name: "Subscribe now", href: "#", icon: DocumentIcon },
+  { name: "Subscribe now", href: "#subscribe", icon: DocumentIcon },
   { name: "Contact Us", href: "#", icon: EnvelopeIcon },
 ];
 
@@ -177,17 +177,17 @@ export default function Example() {
             Newsletter
           </Link>
           <Link
-            href="#bio"
+            href="#aboutus"
             className="text-sm font-semibold leading-6 text-white hover:text-[#6379E9]"
           >
-            bio
+            About Us
           </Link>
           <Link
             href="#vision"
             scroll={false}
             className="text-sm font-semibold leading-6 text-white hover:text-[#6379E9]"
           >
-            vision
+            Vision
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
@@ -261,7 +261,7 @@ export default function Example() {
                 </a>
                 <a
                   onClick={() => setMobileMenuOpen(false)}
-                  href="#team"
+                  href="#aboutus"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About us

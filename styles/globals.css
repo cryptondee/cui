@@ -10,13 +10,11 @@
   h2,
   h3 {
     font-family: var(--font-bitter);
-    color: white !important;
   }
   p,
   span,
   time {
     font-family: var(--font-mont);
-    color: white !important;
   }
   time {
     margin-bottom: 1rem;

@@ -7,7 +7,7 @@ export default function Blogs({ posts }) {
   const showPost = revPost.slice(0, 9);
 
   return (
-    <div id="newsletter" className="bg-[#282C31] pt-24 pb-6 sm:py-32">
+    <div id="newsletter" className="bg-white pt-24 pb-6 sm:py-32">
       <div className="img-center text-center content-center m-auto">
         <Cutoff className="m-auto" />
       </div>
@@ -51,16 +51,6 @@ export default function Blogs({ posts }) {
                       <p className="mt-5 text-sm leading-6 text-gray-600 line-clamp-3">
                         {post.subtitle}
                       </p>
-                    </div>
-                    <div className="sticky mt-8 flex items-center gap-x-4">
-                      <span> By</span>
-                      <div className="text-sm leading-6">
-                        {post.authors.map((author, index) => (
-                          <span key={index} className="">
-                            {author}{" "}
-                          </span>
-                        ))}
-                      </div>
                     </div>
                   </article>
                 </a>
