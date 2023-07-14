@@ -13,7 +13,7 @@ const montserrat = Serif({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${bitter.variable} ${montserrat.variable}`}>
+    <main className={`${bitter.variable} ${montserrat.variable} bg-gray-900`}>
       <Component {...pageProps} />;
     </main>
   );
