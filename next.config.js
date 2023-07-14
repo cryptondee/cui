@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["beehiiv-images-production.s3.amazonaws.com"],
+    path:"/"
   },
 };
 

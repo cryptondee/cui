@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
+import Cutoff from "./Cutoff";
 
 export default function Blogs({ posts }) {
   const revPost = posts.reverse();
@@ -7,6 +8,7 @@ export default function Blogs({ posts }) {
 
   return (
     <div id="newsletter" className="bg-white pt-24 pb-6 sm:py-32">
+      <Cutoff />
       <div className="text-center cotnent-center mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-3xl pb-12 font-bold tracking-tight text-gray-900 sm:text-4xl">
