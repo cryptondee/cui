@@ -29,9 +29,12 @@ export default function Home({ data }) {
     <>
       <Head>
         <title>Castle Capital</title>
-        <meta name="description" content="We navigate the dynamic world of DeFi" />
+        <meta
+          name="description"
+          content="We navigate the dynamic world of DeFi"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="assets/Logo-W-favi.ico" />
       </Head>
       <Header />
       <Hero />
