@@ -2,17 +2,16 @@ import React, { Fragment, useState, useRef } from "react";
 import Link from "next/link";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import {
-  Bars3Icon,
-  ChartPieIcon,
-  ChatBubbleBottomCenterIcon,
+  BanknotesIcon,
+  FireIcon,
+  ChatBubbleLeftRightIcon,
   Cog8ToothIcon,
-  CurrencyDollarIcon,
-  CursorArrowRaysIcon,
+  ClipboardIcon,
+  ArchiveBoxIcon,
+  LinkIcon,
   DocumentIcon,
   EnvelopeIcon,
-  FingerPrintIcon,
-  FunnelIcon,
-  SquaresPlusIcon,
+  Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import {
@@ -27,39 +26,46 @@ import LogoB from "./LogoB";
 
 const products = [
   {
-    name: "Fundraising",
+    name: "Fundraising Support",
     description:
       "Castle Capital connects you with angel investors and provides support beyond funding for your project.",
     href: "#services",
-    icon: ChartPieIcon,
+    icon: BanknotesIcon,
   },
   {
     name: "Marketing Strategy",
     description:
-      "We have DeFi expertise, a partner network, and experience to help you achieve your goals.",
+      "Stand out in the DeFi landscape with our dynamic marketing strategies, shaped by keen market insights and user trends, as we craft unique narratives to help you make an impact.",
     href: "#services",
-    icon: CursorArrowRaysIcon,
+    icon: FireIcon,
   },
   {
     name: "Business Development",
     description:
-      "Castle Capital quickly identifies industry trends and connects you with potential partners to grow your business.",
+      "Unlock growth opportunities and scalable operations by leveraging our industry knowledge and established networks to identify strategic partnerships and collaborations.",
     href: "#services",
-    icon: ChatBubbleBottomCenterIcon,
+    icon: ChatBubbleLeftRightIcon,
   },
   {
-    name: "Tokenomic Design",
+    name: "On-Chain Analysis",
     description:
-      "As DeFi enthusiasts, we understand the importance of tokenomics and believe in incentivizing user actions for sustainable growth.",
+      "Gain a strategic advantage with our on-chain data analysis, delivering actionable insights by decoding user behavior, trend movements, and competitive dynamics.",
     href: "#services",
-    icon: Cog8ToothIcon,
+    icon: LinkIcon,
   },
   {
-    name: "Product Strategy",
+    name: "Documentation",
     description:
-      "We guide product and go-to-market strategies, identifying gaps in the market to solidify user base.",
+      "Our documentation services simplify complex DeFi concepts, fostering community engagement and driving project growth by distilling complexity into comprehension.",
     href: "#services",
-    icon: FunnelIcon,
+    icon: ClipboardIcon,
+  },
+  {
+    name: "Content Creation",
+    description:
+      "Our ghostwriting service delivers high-quality content tailored to your brand's voice, utilizing an extensive Key Opinion Leader network when necessary, to meet all your content needs.",
+    href: "#services",
+    icon: ArchiveBoxIcon,
   },
 ];
 const callsToAction = [
@@ -73,8 +79,6 @@ function classNames(...classes) {
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const newsletterRef = useRef();
-  const teamRef = useRef();
   const handleScroll = (e) => {
     e.preventDefault();
     console.log(e);
@@ -122,7 +126,7 @@ export default function Example() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 -translate-y-1"
             >
-              <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-gray-900 pt-14 shadow-lg ring-1 ring-gray-900/5">
+              <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-gray-900 pt-20 shadow-lg ring-1 ring-gray-900/5">
                 <div className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
                   {products.map((item) => (
                     <div
@@ -154,6 +158,7 @@ export default function Example() {
                         <a
                           key={item.name}
                           href={item.href}
+                          onClick={() => setMobileMenuOpen(false)}
                           className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-white hover:bg-indigo-500"
                         >
                           <item.icon
@@ -236,6 +241,7 @@ export default function Example() {
                             key={item.name}
                             as="a"
                             href={item.href}
+                            onClick={() => setMobileMenuOpen(false)}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             {item.name}
@@ -247,17 +253,17 @@ export default function Example() {
                 </Disclosure>
                 <a
                   onClick={() => setMobileMenuOpen(false)}
-                  href="#blog"
+                  href="#newsletter"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Newsletter
                 </a>
                 <a
                   onClick={() => setMobileMenuOpen(false)}
-                  href="#value"
+                  href="#vision"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Value-add & Expertise
+                  Vision
                 </a>
                 <a
                   onClick={() => setMobileMenuOpen(false)}

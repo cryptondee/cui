@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const navigation = {
   main: [
-    { name: "About", href: "#team" },
+    { name: "About", href: "#aboutus" },
     { name: "Newsletter", href: "#newsletter" },
-    { name: "Partners", href: "#" },
+    //    { name: "Partners", href: "#" },
   ],
   social: [
     {
