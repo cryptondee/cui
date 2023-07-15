@@ -79,6 +79,11 @@ function classNames(...classes) {
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const handleMobileMenuToggle = () => {
+    setMobileMenuOpen((prevState) => !prevState);
+  };
+
   const handleScroll = (e) => {
     e.preventDefault();
     console.log(e);
@@ -101,7 +106,11 @@ export default function Example() {
           <button
             type="button"
             className=" inline-flex items-center justify-center rounded-md p-2.5 text-white"
-            onClick={() => setMobileMenuOpen(true)}
+            onClick={() =>
+              mobileMenuOpen
+                ? setMobileMenuOpen(false)
+                : setMobileMenuOpen(true)
+            }
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -174,7 +183,13 @@ export default function Example() {
               </Popover.Panel>
             </Transition>
           </Popover>
-
+          <Link
+            href="#vision"
+            scroll={false}
+            className="text-sm font-semibold leading-6 text-white hover:text-[#6379E9]"
+          >
+            Vision
+          </Link>
           <Link
             href="#newsletter"
             className="text-sm font-semibold leading-6 text-white hover:text-[#6379E9]"
@@ -186,13 +201,6 @@ export default function Example() {
             className="text-sm font-semibold leading-6 text-white hover:text-[#6379E9]"
           >
             About Us
-          </Link>
-          <Link
-            href="#vision"
-            scroll={false}
-            className="text-sm font-semibold leading-6 text-white hover:text-[#6379E9]"
-          >
-            Vision
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
@@ -222,7 +230,11 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
+                <Disclosure
+                  as="div"
+                  className="-mx-3"
+                  onClick={handleMobileMenuToggle}
+                >
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50">
@@ -237,15 +249,14 @@ export default function Example() {
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
                         {[...products, ...callsToAction].map((item) => (
-                          <Disclosure.Button
+                          <a
                             key={item.name}
-                            as="a"
                             href={item.href}
                             onClick={() => setMobileMenuOpen(false)}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             {item.name}
-                          </Disclosure.Button>
+                          </a>
                         ))}
                       </Disclosure.Panel>
                     </>
