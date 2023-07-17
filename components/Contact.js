@@ -146,12 +146,7 @@ export default function Contact() {
                   />
                 </dt>
                 <dd>
-                  <a
-                    className="hover:text-white"
-                    href="mailto:hello@castlecapital.vc"
-                  >
-                    hello@castlecapital.vc
-                  </a>
+
                 </dd>
               </div>
             </dl>
