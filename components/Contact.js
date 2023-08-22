@@ -5,81 +5,9 @@ import {
 } from "@heroicons/react/24/outline";
 import axios from "axios";
 import React, { useState } from "react";
+import { Widget } from "@typeform/embed-react";
 
 export default function Contact() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const [buttonText, setButtonText] = useState("Send message");
-
-  const [errors, setErrors] = useState({});
-
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [showFailureMessage, setShowFailureMessage] = useState(false);
-
-  const handleValidation = () => {
-    let tempErrors = {};
-    let isValid = true;
-
-    if (firstName.length <= 0) {
-      tempErrors["firstName"] = true;
-      isValid = false;
-    }
-    if (lastName.length <= 0) {
-      tempErrors["lastName"] = true;
-      isValid = false;
-    }
-    if (email.length <= 0) {
-      tempErrors["email"] = true;
-      isValid = false;
-    }
-    if (message.length <= 0) {
-      tempErrors["message"] = true;
-      isValid = false;
-    }
-
-    setErrors({ ...tempErrors });
-    console.log("error(s)", errors);
-    return isValid;
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    let isValidForm = handleValidation();
-
-    if (isValidForm) {
-      setButtonText("Sending Message...");
-      const res = await fetch("/api/form", {
-        body: JSON.stringify({
-          email: email,
-          firstName: firstName,
-          lastName: lastName,
-          message: message,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      });
-      const { error } = await res.json();
-      if (error) {
-        console.log(error);
-        setShowSuccessMessage(false);
-        setShowFailureMessage(true);
-        return;
-      }
-      setShowSuccessMessage(true);
-      setShowFailureMessage(false);
-      setFirstName("");
-      setLastName("");
-      setEmail("");
-      setMessage("");
-      console.log(`${firstName} ${lastName} \n ${email} \n ${message}`);
-    }
-  };
-
   return (
     <div id="contact" className="relative isolate bg-gray-900">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
@@ -145,138 +73,12 @@ export default function Contact() {
                     aria-hidden="true"
                   />
                 </dt>
-                <dd>
-
-                </dd>
+                <dd></dd>
               </div>
             </dl>
           </div>
         </div>
-        <form
-          onSubmit={handleSubmit}
-          method="POST"
-          className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
-        >
-          <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-              <div>
-                <label
-                  htmlFor="first-name"
-                  className="block text-sm font-semibold leading-6 text-white"
-                >
-                  First name
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="first-name"
-                    id="first-name"
-                    autoComplete="given-name"
-                    value={firstName}
-                    onChange={(e) => {
-                      setFirstName(e.target.value);
-                    }}
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                  />
-                  {errors?.firstName && (
-                    <p className="text-red-500">First Name cannot be empty.</p>
-                  )}
-                </div>
-              </div>
-              <div>
-                <label
-                  htmlFor="last-name"
-                  className="block text-sm font-semibold leading-6 text-white"
-                >
-                  Last name
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="last-name"
-                    id="last-name"
-                    autoComplete="family-name"
-                    value={lastName}
-                    onChange={(e) => {
-                      setLastName(e.target.value);
-                    }}
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                  />
-                  {errors?.lastName && (
-                    <p className="text-red-500">Last Name cannot be empty.</p>
-                  )}
-                </div>
-              </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-semibold leading-6 text-white"
-                >
-                  Your Email
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    autoComplete="email"
-                    value={email}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                    }}
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                  />
-                  {errors?.email && (
-                    <p className="text-red-500">email cannot be empty.</p>
-                  )}
-                </div>
-              </div>
-              <div className="sm:col-span-2">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-semibold leading-6 text-white"
-                >
-                  Message
-                </label>
-                <div className="mt-2.5">
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows={4}
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                    value={message}
-                    onChange={(e) => {
-                      setMessage(e.target.value);
-                    }}
-                  />
-                  {errors?.message && (
-                    <p className="text-red-500">Message cannot be empty.</p>
-                  )}
-                </div>
-              </div>
-            </div>
-            <div className="mt-8 flex justify-end">
-              <button
-                type="submit"
-                className="rounded-md bg-[#6379E9] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-              >
-                {buttonText}
-              </button>
-            </div>
-            <div className="text-left">
-              {showSuccessMessage && (
-                <p className="text-[#6379E9] font-semibold text-sm my-2">
-                  Thankyou! Your Message has been delivered.
-                </p>
-              )}
-              {showFailureMessage && (
-                <p className="text-red-500">
-                  Oops! Something went wrong, please try again.
-                </p>
-              )}
-            </div>
-          </div>
-        </form>
+        <Widget id="ibaGG4n6" style={{ width: "100%" }} className="my-form" />
       </div>
     </div>
   );

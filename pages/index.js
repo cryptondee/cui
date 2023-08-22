@@ -12,7 +12,7 @@ import axios from "axios";
 
 import { Bitter as Serif } from "@next/font/google";
 import AboutUs from "@/components/AboutUs";
-import Contact from "@/components/Contact";
+import Contact from "@/components/Contact.js";
 const serif = Serif({
   subsets: ["latin"],
   variable: "--font-serif",
