@@ -4,6 +4,11 @@ import Cutoff from "./Cutoff";
 
 export default function Blogs({ posts }) {
   const revPost = posts.reverse();
+  console.log(
+    revPost.filter((el) => {
+      return el.publish_date != null;
+    })
+  );
   const showPost = revPost.slice(0, 9);
 
   return (
