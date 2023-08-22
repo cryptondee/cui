@@ -191,7 +191,7 @@ export default function Example() {
             Vision
           </Link>
           <Link
-            href="#newsletter"
+            href="https://chronicle.castlecapital.vc/"
             className="text-sm font-semibold leading-6 text-white hover:text-[#6379E9]"
           >
             Newsletter
@@ -201,6 +201,12 @@ export default function Example() {
             className="text-sm font-semibold leading-6 text-white hover:text-[#6379E9]"
           >
             About Us
+          </Link>
+          <Link
+            href="#contact"
+            className="text-sm font-semibold leading-6 text-white hover:text-[#6379E9]"
+          >
+            Contact Us
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
@@ -264,7 +270,7 @@ export default function Example() {
                 </Disclosure>
                 <a
                   onClick={() => setMobileMenuOpen(false)}
-                  href="#newsletter"
+                  href="https://chronicle.castlecapital.vc/"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Newsletter
@@ -282,6 +288,13 @@ export default function Example() {
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About us
+                </a>
+                <a
+                  onClick={() => setMobileMenuOpen(false)}
+                  href="#contact"
+                  className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Contact us
                 </a>
               </div>
             </div>
