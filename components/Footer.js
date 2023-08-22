@@ -3,7 +3,7 @@ import Link from "next/link";
 const navigation = {
   main: [
     { name: "About", href: "#aboutus" },
-    { name: "Newsletter", href: "#newsletter" },
+    { name: "Newsletter", href: "https://chronicle.castlecapital.vc/" },
     //    { name: "Partners", href: "#" },
   ],
   social: [
