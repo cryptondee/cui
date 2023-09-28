@@ -73,7 +73,7 @@ export default function Contact() {
           </div>
         </div>
         <iframe
-          className="m-auto mx-32"
+          className="p-auto px-12"
           data-tally-src="https://tally.so/embed/3Elqg4?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
           loading="lazy"
           width="100%"
